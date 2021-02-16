@@ -21,6 +21,9 @@ class Education extends React.Component {
       handleSubmit,
     } = this.props;
 
+    console.log(education);
+    console.log("Type: " + typeof eduacation);
+
     const view = education.map((info) => {
       let index = education.indexOf(info);
       const schools = Object.entries(info).map((item, index) => (
