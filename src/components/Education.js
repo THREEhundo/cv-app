@@ -86,8 +86,8 @@ const Education = (props) => {
   );
 
   return (
-    <Container id="educationContainer" className="offSetBtm">
-      <div className={hideDiv(props.educationInput)}>
+    <Container id="educationContainer" className="offSetBtm" fluid="sm">
+      <div className={"w-122" + hideDiv(props.educationInput)} fluid="true">
         {view}
         <Button
           className="schoolBtn"
