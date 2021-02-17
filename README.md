@@ -4,6 +4,7 @@
 
 - ReactJS
 - State Management
+- Hooks
 - Bootstrap
 - CSS
 - HTML
