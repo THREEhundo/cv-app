@@ -16,7 +16,7 @@ const App = (props) => {
     role: "4th Grade Teacher",
     company: "Springfield Elementary School",
     city: "Springfield, OR",
-    from: 1989 + " -",
+    from: 1989,
     to: "Present",
     description: "Bart Simpson's teacher",
   });
@@ -92,25 +92,10 @@ const App = (props) => {
   };
 
   const handleWorkChange = (e) => {
-    const value = e.target.value;
-    const id = e.target.name;
-    let item;
-    let workExperienceArr = [...workExperience];
-    if (id === "from") {
-      item = {
-        ...workExperienceArr[0],
-        [id]: value + " - ",
-      };
-    }
-    item = {
-      ...workExperienceArr[0],
-      [id]: value,
-    };
-    console.log(id);
-    console.log(value);
-    setWorkExperience({ ...workExperience, workExperience: [item] });
+    const { value, name } = e.target;
+    setWorkExperience({ ...workExperience, [name]: value });
   };
-  // education form
+
   const handleEducationChange = (e) => {
     const { value, name } = e.target;
     setEducationForm({
